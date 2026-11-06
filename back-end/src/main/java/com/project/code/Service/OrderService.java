@@ -1,6 +1,5 @@
 package com.project.code.Service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.project.code.Model.Customer;
@@ -50,22 +49,11 @@ public class OrderService {
     // - Create and save `OrderItem` for each product and associate it with the
     // `OrderDetails` using `orderItemRepository.save()`.
 
-    @Autowired
     private final ProductRepository productRepository;
-
-    @Autowired
     private final InventoryRepository inventoryRepository;
-
-    @Autowired
     private final CustomerRepository customerRepository;
-
-    @Autowired
     private final StoreRepository storeRepository;
-
-    @Autowired
     private final OrderDetailsRepository orderDetailsRepository;
-
-    @Autowired
     private final OrderItemRepository orderItemRepository;
 
     public OrderService(
